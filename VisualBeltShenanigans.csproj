@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC194B2C-B49C-4C19-BD39-B4C543E340B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VisualBeltShenanigans</RootNamespace>
+    <AssemblyName>VisualBeltSchenanigans</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GraphX.Standard.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\GraphX.3.0.0\lib\net461\GraphX.Standard.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphX.Standard.Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\GraphX.3.0.0\lib\net461\GraphX.Standard.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphX.WPF.Controls, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\GraphX.3.0.0\lib\net461\GraphX.WPF.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MrpV2.GenericLibrary, Version=1.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MrpV2.GenericLibrary.1.3.4\lib\netstandard2.0\MrpV2.GenericLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuickGraph, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QuickGraphCore.1.0.0\lib\net40\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="code\data\context\BeltContext.cs" />
+    <Compile Include="code\data\context\BeltSpeed.cs" />
+    <Compile Include="code\data\graph\BeltPlanGraph.cs" />
+    <Compile Include="code\data\graph\BeltPlanGraphCore.cs" />
+    <Compile Include="code\data\graph\BeltPlanGraphEdge.cs" />
+    <Compile Include="code\data\plan\BeltPlan.cs" />
+    <Compile Include="code\data\plan\ICanInsertMergerAfter.cs" />
+    <Compile Include="code\data\plan\Input.cs" />
+    <Compile Include="code\data\plan\ISplittable.cs" />
+    <Compile Include="code\data\plan\Merger.cs" />
+    <Compile Include="code\data\plan\Node.cs" />
+    <Compile Include="code\data\plan\Output.cs" />
+    <Compile Include="code\data\plan\Splitter.cs" />
+    <Compile Include="code\data\scenario\BeltBalancingScenario.cs" />
+    <Compile Include="code\data\scenario\BeltScenario.cs" />
+    <Compile Include="code\data\scenario\BeltSubtractingScenario.cs" />
+    <Compile Include="code\util\NumberManipulation.cs" />
+    <Compile Include="code\util\Sum.cs" />
+    <Compile Include="code\visual\prompt\IGetScenario.cs" />
+    <Compile Include="visual\control\BeltScenarioBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\BeltScenarioBaseControl.Designer.cs">
+      <DependentUpon>BeltScenarioBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\control\BeltSpeedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\BeltSpeedControl.Designer.cs">
+      <DependentUpon>BeltSpeedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\control\ContextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\ContextControl.Designer.cs">
+      <DependentUpon>ContextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\control\ScenarioDisplayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\ScenarioDisplayControl.Designer.cs">
+      <DependentUpon>ScenarioDisplayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\control\SpeedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\SpeedControl.Designer.cs">
+      <DependentUpon>SpeedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\control\TierControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visual\control\TierControl.Designer.cs">
+      <DependentUpon>TierControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\form\GraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\form\GraphForm.Designer.cs">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\prompt\BalancingScenarioPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\BalancingScenarioPrompt.Designer.cs">
+      <DependentUpon>BalancingScenarioPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\prompt\BeltSpeedPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\BeltSpeedPrompt.Designer.cs">
+      <DependentUpon>BeltSpeedPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\prompt\ContextPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\ContextPrompt.Designer.cs">
+      <DependentUpon>ContextPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="code\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="visual\prompt\ScenarioPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\ScenarioPrompt.Designer.cs">
+      <DependentUpon>ScenarioPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\prompt\SpeedPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\SpeedPrompt.Designer.cs">
+      <DependentUpon>SpeedPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visual\prompt\SubtractingScenarioPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visual\prompt\SubtractingScenarioPrompt.Designer.cs">
+      <DependentUpon>SubtractingScenarioPrompt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="visual\control\BeltScenarioBaseControl.resx">
+      <DependentUpon>BeltScenarioBaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\control\BeltSpeedControl.resx">
+      <DependentUpon>BeltSpeedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\control\ContextControl.resx">
+      <DependentUpon>ContextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\control\ScenarioDisplayControl.resx">
+      <DependentUpon>ScenarioDisplayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\control\SpeedControl.resx">
+      <DependentUpon>SpeedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\control\TierControl.resx">
+      <DependentUpon>TierControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\form\GraphForm.resx">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\BalancingScenarioPrompt.resx">
+      <DependentUpon>BalancingScenarioPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\BeltSpeedPrompt.resx">
+      <DependentUpon>BeltSpeedPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\ContextPrompt.resx">
+      <DependentUpon>ContextPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\ScenarioPrompt.resx">
+      <DependentUpon>ScenarioPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\SpeedPrompt.resx">
+      <DependentUpon>SpeedPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visual\prompt\SubtractingScenarioPrompt.resx">
+      <DependentUpon>SubtractingScenarioPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
