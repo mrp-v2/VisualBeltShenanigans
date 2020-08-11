@@ -16,7 +16,7 @@ namespace VisualBeltShenanigans.code.data.graph
 
 		public override string ToString()
 		{
-			return $"{decimal.Round(Source.OutputRate, 3)} i/m";
+			return Source.GetRateDisplayString(Target);
 		}
 
 		public bool Equals(BeltPlanGraphEdge other)

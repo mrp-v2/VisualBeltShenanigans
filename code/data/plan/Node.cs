@@ -139,6 +139,29 @@ namespace VisualBeltShenanigans.code.data.plan
 			}
 		}
 
+		public string GetRateDisplayString(Node output)
+		{
+			int identicalOutputs = GetIdenticalOutputsCount(output);
+			return $"{decimal.Round(OutputRate, 3)}{(identicalOutputs > 1 ? $" x{identicalOutputs}" : "")} i/m";
+		}
+
+		private int GetIdenticalOutputsCount(Node output)
+		{
+			int i = 0;
+			foreach (Node node in Outputs)
+			{
+				if (node is Output)
+				{
+					continue;
+				}
+				if (node == output)
+				{
+					i++;
+				}
+			}
+			return i;
+		}
+
 		protected bool ContinueGraphOperation(List<Node> visitedNodes)
 		{
 			if (visitedNodes.Contains(this))
